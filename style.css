@@ -1,13 +1,17 @@
 /* When someone enters your game, you only want them to see the opening and the option buttons. The code below will use the display property to hide certain parts of the story. Remove the comments from the code below when you're ready for that step!*/
 
-/* 
+
 .option-one-screen, 
 .option-two-screen, 
 .option-one-end, 
 .option-two-end  {
    display:none;
 }
-*/
+
+.shelter-screen{
+    display: none;
+}
+
 
 
 /* Feel free to change any of the styling below!*/
@@ -19,7 +23,7 @@ body {
 
 /* Style the body with a background color or image if desired */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     background-color: #f0f0f0;
     text-align: center;
     padding: 20px;
@@ -55,7 +59,7 @@ body {
 }
 
 /* Style the buttons container */
-.buttons {
+.first-layer-buttons, .second-layer-buttons-one, .second-layer-buttons-two {
     margin: 20px;
 }
 
@@ -77,8 +81,12 @@ button:hover {
 }
 
 /* Style the screens for option one and option two */
-.option-one-screen,
-.option-two-screen,
+.why-screen,
+.explore-screen,
+.shelter-screen,
+.dark-screen,
+.attack-screen,
+.run-screen,
 .option-one-end,
 .option-two-end {
     background-color: #fff;
@@ -87,23 +95,36 @@ button:hover {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     margin-bottom: 10px;
+    display: none;
+    justify-content: center;
+    text-align: center;
 }
 
 /* Style the images in the screens */
-.option-one-screen img,
-.option-two-screen img,
+.explore-screen img,
+.why-screen img,
+.shelter-screen img,
+.dark-screen img,
+.attack-screen img,
+.run-screen img,
 .option-one-end img,
 .option-two-end img {
-    max-width: 100%;
+    max-width: 500px;
     height: auto;
     margin-bottom: 10px;
+    display: none;
 }
 
 /* Style the text in the screens */
-.option-one-screen h1,
-.option-two-screen h1,
+.explore-screen h1,
+.why-screen h1,
+.shelter-screen,
+.dark-screen h1,
+.attack-screen h1,
+.run-screen h1,
 .option-one-end h1,
 .option-two-end h1 {
     font-size: 20px;
     margin-bottom: 20px;
+    display: none;
 }
