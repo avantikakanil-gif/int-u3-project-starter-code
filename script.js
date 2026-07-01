@@ -27,6 +27,19 @@ let runBtn = document.querySelector(".run-away");
 let runScreen = document.querySelector(".run-screen");
 let runHeader = document.querySelector(".run-header");
 let runImg = document.querySelector(".run-img");
+let congratulations = document.querySelector(".congratulations");
+let fragrant = document.querySelector(".fragrant");
+let branch = document.querySelector(".branch");
+let safe = document.querySelector(".safe");
+let bear = document.querySelector(".bear");
+let survivor = document.querySelector(".survivor");
+let password = document.querySelector(".password");
+let submit = document.querySelector(".submit");
+let hiddenScreen = document.querySelector(".hidden-screen");
+let hiddenHeader = document.querySelector(".hidden-header");
+let wrong = document.querySelector(".wrong");
+let submitTwo = document.querySelector(".submit-two");
+let acorns = 0;
 
 
 secondLayerButtonsOne.style.display = "none";
@@ -43,6 +56,11 @@ attackImg.style.display = "none";
 runScreen.style.display = "none";
 runHeader.style.display = "none";
 runImg.style.display = "none";
+congratulations.style.display = "none";
+password.style.display = "none";
+hiddenScreen.style.display = "none";
+hiddenHeader.style.display = "none";
+wrong.style.display = "none";
 
 exploreForest.addEventListener('click', function(){
     exploreScreen.style.display = "block";
@@ -51,6 +69,7 @@ exploreForest.addEventListener('click', function(){
     secondLayerButtonsOne.style.display = "block";
     storyOpening.style.display = "none";
     firstLayerButtons.style.display = "none";
+    congratulations.style.display = "none";
 });
 
 figureOut.addEventListener('click', function() {
@@ -60,6 +79,7 @@ figureOut.addEventListener('click', function() {
     storyOpening.style.display = "none";
     firstLayerButtons.style.display = "none";
     secondLayerButtonsTwo.style.display = "block";
+    congratulations.style.display = "none";
 });
 
 shelterBtn.addEventListener('click', function(){
@@ -70,6 +90,7 @@ shelterBtn.addEventListener('click', function(){
     exploreScreen.style.display = "none";
     exploreHeader.style.display = "none";
     exploreImg.style.display = "none";
+    congratulations.style.display = "none";
 });
 
 darkBtn.addEventListener('click', function(){
@@ -80,16 +101,18 @@ darkBtn.addEventListener('click', function(){
     exploreScreen.style.display = "none";
     exploreHeader.style.display = "none";
     exploreImg.style.display = "none";
+    congratulations.style.display = "none";
 });
 
 attackBtn.addEventListener("click", function() {
-    attackScreen.style.display = "block";
+    attackScreen.style.display = "block"
     attackHeader.style.display = "block";
     attackImg.style.display = "block";
     secondLayerButtonsTwo.style.display = "none";
     whyScreen.style.display = "none";
     whyHeader.style.display = "none";
     whyImg.style.display = "none";
+    congratulations.style.display = "none";
 });
 
 runBtn.addEventListener("click", function() {
@@ -100,5 +123,70 @@ runBtn.addEventListener("click", function() {
     whyScreen.style.display = "none";
     whyHeader.style.display = "none";
     whyImg.style.display = "none";
+    congratulations.style.display = "none";
 });
 
+fragrant.addEventListener("click", function() {
+    congratulations.style.display = "block";
+    acorns += 1;
+});
+
+branch.addEventListener("click", function() {
+    congratulations.style.display = "block";
+    acorns += 1;
+});
+
+safe.addEventListener("click", function() {
+    congratulations.style.display = "block";
+    acorns += 1;
+    if (acorns === 3) {
+    password.style.color = "white";
+    password.style.display = "block";
+    }
+});
+
+bear.addEventListener("click", function() {
+    congratulations.style.display = "block";
+    acorns += 1;
+});
+
+survivor.addEventListener("click", function() {
+    congratulations.style.display = "block";
+    acorns += 1;
+    if (acorns === 3) {
+    password.style.color = "white";
+    password.style.display = "block";
+    }
+});
+
+submit.addEventListener("click", function() {
+    let passwordInput = (document.getElementById("secret-password")).value;
+    if (passwordInput === "a-little-birdie-told-me") {
+        hiddenScreen.style.display = "block";
+        hiddenHeader.style.display = "block";
+        congratulations.style.display = "none";
+        shelterHeader.style.display = "none";
+        shelterImg.style.display = "none";
+        shelterScreen.style.display = "none";
+        password.style.display = "none";
+    } else {
+        wrong.style.display = "block";
+        wrong.style.color = "white";
+    }
+});
+
+submitTwo.addEventListener("click", function() {
+    let passwordInput = (document.getElementById("secret-password-two")).value;
+    if (passwordInput === "a-little-birdie-told-me") {
+        hiddenScreen.style.display = "block";
+        hiddenHeader.style.display = "block";
+        runScreen.style.display = "none";
+        runHeader.style.display = "none";
+        runImg.style.display = "none";
+        congratulations.style.display = "none";
+        password.style.display = "none";
+    } else {
+        wrong.style.display = "block";
+        wrong.style.color = "white";
+    }
+});

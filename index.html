@@ -8,10 +8,13 @@
     
     <body>
         <!-- Add a title and edit the opening of your story. -->
-        <div class="title"> Bird Adventure Game </div>
+        <div class="title"> A Bird's Life </div>
+        <h1 class="congratulations">Congratulations! You found an acorn.</h1>
+        <h1 class = "password">You found all three acorns! Your secret password is "a-little-birdie-told-me"</h1>
+        <h1 class = "wrong">Incorrect Password</h1>
         <div class="story-opening">
             <img src="https://tse1.mm.bing.net/th/id/OIP.Ria-IFK9BKSLZBq8-SwfvgHaGe?r=0&rs=1&pid=ImgDetMain&o=7&rm=3">
-            <h1>One day, you wake up and surprisingly find that you have become a bird in a fragrant forest filled with trees. What is your next move?</h1>
+            <h1>One day, you wake up and surprisingly find that you have become a bird in a <span class = "fragrant">fragrant</span> forest filled with trees. What is your next move?</h1>
         </div>
 
         <!-- Change the text of the buttons to the options relevant to your story. -->
@@ -19,10 +22,9 @@
             <button class="explore-forest">Explore the forest.</button>
             <button class="find-out-why">Find out why you have become a bird.</button>
         </div>
-
         <!-- Put the part of the story the user will see if they picked option one. -->
         <div class="explore-screen">
-            <h1 class = "explore-header">While flying through the forest, you stumble upon an empty branch that is perfect for building a nest on. Do you build a nest and shelter for the night or continue exploring?</h1>
+            <h1 class = "explore-header">While flying through the forest, you stumble upon an empty <span class = "branch">branch</span> that is perfect for building a nest on. Do you build a nest and shelter for the night or continue exploring?</h1>
             <img class = "explore-img" src="https://th.bing.com/th/id/R.f9a2b25acdcaaa820e8667086ebc6be7?rik=Z6sudC2B7xl9ew&riu=http%3a%2f%2fimages.wisegeek.com%2fforest.jpg&ehk=L%2faGG3ZgBQo%2fDoK2YpxpA8skQ5HXyI6CqokH7kkCVcY%3d&risl=&pid=ImgRaw&r=0">
         </div>
 
@@ -32,7 +34,10 @@
         </div>
 
         <div class = "shelter-screen">
-            <h1 class = "shelter-header">By choosing to shelter for the night, you survived the dangers of the dark and lived to see another day.</h1>
+            <h1 class = "shelter-header">By choosing to <span class = "safe">shelter</span> for the night, you survived the dangers of the dark and lived to see another day.</h1>
+            <label for="secret-password">Enter Password Here:</label>
+            <input type = "text" id = "secret-password" placeholder = "Type the password!">
+            <button class = "submit">Submit!</button>
             <img class = "shelter-img" src = "https://th.bing.com/th/id/OIP.ghy2uV3R9EE1Msi8zxNSwwHaE8?w=279&h=186&c=7&r=0&o=7&dpr=1.2&pid=1.7&rm=3">
         </div>
 
@@ -43,8 +48,9 @@
 
         <!-- Put the part of the story the user will see if they picked option two. -->
         <div class="why-screen">
-            <h1 class = "why-header">While on your search to find the reason that you became a bird, you come across a very hungry bear. Do you attack the bear or try and run away?</h1>
+            <h1 class = "why-header">While on your search to find the reason that you became a bird, you come across a very hungry <span class = "bear">bear</span>. Do you attack the bear or try and run away?</h1>
             <img class = "why-img" src="https://tse4.mm.bing.net/th/id/OIP.nsxsAebEu-PeqxKGJLWqBwHaEK?r=0&rs=1&pid=ImgDetMain&o=7&rm=3">
+        </div>
         <div class="second-layer-buttons-two">
             <button class="attack">Attack the bear.</button>
             <button class="run-away">Run away from the bear.</button>
@@ -56,8 +62,15 @@
         </div>
 
         <div class = "run-screen">
-            <h1 class = "run-header">Choosing to run away, you quickly flap your wings and soar to the highest tree you can find, surviving to see another day.</h1>
+            <h1 class = "run-header">Choosing to run away, you quickly flap your wings and soar to the highest tree you can find, <span class = "survivor">surviving</span> to see another day.</h1>
+            <label for="secret-password">Enter Password Here:</label>
+            <input type = "text" id = "secret-password-two" placeholder = "Type the password!">
+            <button class = "submit-two">Submit!</button>
             <img class = "run-img" src = "https://tse3.mm.bing.net/th/id/OIP.zDPswVLfB2BzKxCi6AnW8wHaE8?r=0&rs=1&pid=ImgDetMain&o=7&rm=3">
+        </div>
+
+        <div class = "hidden-screen">
+            <h1 class = "hidden-header">Congratulations! You unlocked the hidden ending. By collecting all three magic acorns, you were able to transform back into a human!</h1>
         </div>
         <script defer src="script.js"></script>
     </body>
